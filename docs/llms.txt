@@ -4,11 +4,16 @@
 
 Brownyx CEL is a documentation-only defensive publication. It does not contain production source code, private prompts, or commercial implementation details.
 
+Source review on November 19, 2026. CEL is optional and runs after recall and before candidate action generation. Reading cycles can supply approved source passages. Within an approved program, CEL can propose a scoped hypothesis revision, identify a gap in the available evidence, or propose a check. An empirical conclusion requires results from a separately authorized check.
+
+Accepted changes commit when the cycle finishes successfully. Analogies and bisociations can yield internal MindCell candidates. MindCell and artifact candidates require operator review. The review covers implementation behavior. Cognitive benefit and subjective experience remain open research questions.
+
 ## Core Pages
 
 - [Home](https://cel.brownyx.com/): project overview and strategy ladder
 - [CEL Specification](https://cel.brownyx.com/cel-specification.md): technical specification and constraints
 - [Architecture](https://cel.brownyx.com/architecture.md): runtime position and component design
+- [Implementation Status](https://cel.brownyx.com/implementation-status.md): reviewed runtime behavior and evaluation limits
 
 ## Documentation
 
@@ -18,13 +23,17 @@ Brownyx CEL is a documentation-only defensive publication. It does not contain p
 - [Terminology](https://cel.brownyx.com/terminology.md): project-specific definitions
 - [FAQ](https://cel.brownyx.com/faq.md): frequently asked questions
 
-## Agent Discovery
+## Documentation Discovery
 
-- [API Catalog](https://cel.brownyx.com/.well-known/api-catalog): machine-readable API catalog
-- [DNS-AID Configuration](https://cel.brownyx.com/.well-known/dns-aid-configuration.md): DNS-based agent discovery setup
-- [Docs API](https://cel.brownyx.com/.well-known/docs-api): documentation endpoint catalog
+- [Documentation Catalog](https://cel.brownyx.com/.well-known/api-catalog.json): static Linkset of public documentation served as `application/json`; no runtime API or MCP server is provided
+- [Legacy Catalog Alias](https://cel.brownyx.com/.well-known/api-catalog): the historical `api-catalog` path serves the same documentation catalog and does not advertise runtime APIs
+- [Optional DNS-AID Notes](https://cel.brownyx.com/.well-known/dns-aid-configuration.md): operator planning notes; live DNS discovery is not established by this repository
+
+The site is published through GitHub Pages. The `_headers` file and Markdown-negotiation Worker are optional templates for another host; GitHub Pages does not apply them. The current site serves HTML at the homepage and public Markdown documents at their file URLs.
+
+Use the JSON-suffixed catalog for discovery. GitHub Pages cannot apply this repository's custom Content-Type headers, and the extensionless catalog aliases are served as `application/octet-stream` on the current host.
 
 ## Citation
 
-- [CITATION.cff](https://github.com/VNemchenko/cognitive-expansion-layer/blob/master/CITATION.cff): citation metadata
-- [Whitepaper](https://github.com/VNemchenko/cognitive-expansion-layer/blob/master/WHITEPAPER.md): full architectural whitepaper
+- [CITATION.cff](https://github.com/herearemytraces/cognitive-expansion-layer/blob/master/CITATION.cff): citation metadata
+- [Whitepaper](https://github.com/herearemytraces/cognitive-expansion-layer/blob/master/WHITEPAPER.md): full architectural whitepaper

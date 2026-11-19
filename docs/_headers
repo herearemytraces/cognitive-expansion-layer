@@ -1,13 +1,39 @@
+# Optional response-header template for hosts that support this format.
+# GitHub Pages does not apply this file; these headers are not live-site claims.
 /*
-  Link: </.well-known/api-catalog>; rel="api-catalog"
-  Link: </docs/api>; rel="service-doc"
+  Link: </.well-known/docs-api>; rel="linkset"; type="application/linkset+json"
   Link: </llms.txt>; rel="describedby"; type="text/markdown"
   Link: </cel-specification.md>; rel="service-doc"; type="text/markdown"
   Link: </architecture.md>; rel="service-doc"; type="text/markdown"
+  Link: </implementation-status.md>; rel="service-doc"; type="text/markdown"
   Link: </faq.md>; rel="service-doc"; type="text/markdown"
-  Link: </.well-known/oauth-authorization-server.json>; rel="authorization"
-  Link: </.well-known/oauth-protected-resource.json>; rel="resource-metadata"
-  Link: </.well-known/openid-configuration.json>; rel="openid-configuration"
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
+
+/.well-known/docs-api
+  Content-Type: application/linkset+json; charset=utf-8
+
+/.well-known/api-catalog
+  Content-Type: application/linkset+json; charset=utf-8
+
+/.well-known/api-catalog.json
+  Content-Type: application/linkset+json; charset=utf-8
+
+/*.md
+  X-Robots-Tag: noindex, follow
+
+/*.txt
+  X-Robots-Tag: noindex, follow
+
+/*.json
+  X-Robots-Tag: noindex, follow
+
+/*.xml
+  X-Robots-Tag: noindex, follow
+
+/.well-known/*
+  X-Robots-Tag: noindex, follow
+
+/.well-known/*/*
+  X-Robots-Tag: noindex, follow

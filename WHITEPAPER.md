@@ -6,6 +6,10 @@
 **Initial public version:** v0.1.0  
 **Year:** 2026
 
+**Documentation review:** 2026-11-19 (unreleased refresh)
+
+This whitepaper preserves the original conceptual publication. The [Implementation Status](docs/implementation-status.md) describes current code-backed boundaries separately. The conceptual version label does not imply a tagged release or archived DOI, and this review does not certify a deployed runtime or demonstrate cognitive improvement.
+
 ---
 
 ## Abstract
@@ -14,11 +18,11 @@
 
 The core problem addressed by CEL is that a direct answer pipeline is often too narrow for a system that is expected to maintain continuity, revise interpretations, detect internal tensions, generate hypotheses, and develop durable questions over time.
 
-CEL introduces a bounded internal layer that operates between recalled context and final synthesis. It does not replace ordinary reasoning. Instead, it selectively expands the reasoning space through a controlled sequence of strategies: context sufficiency checks, intent clarification, frame switching, contradiction detection, hypothesis generation, self-model tension detection, question generation, analogy, and late-stage bisociation.
+CEL introduces a bounded internal layer that operates between recalled context and final synthesis. It does not replace ordinary reasoning. Instead, it selectively expands the reasoning space through a controlled hierarchy of strategies: context sufficiency checks, intent clarification, frame switching, contradiction detection, hypothesis generation, self-model tension detection, question generation, analogy, and late-stage bisociation.
 
-The output of CEL is not automatically exposed to the user. CEL is internal by default. Its outputs map into existing runtime structures depending on boundaries: trace records, agenda items, hypotheses, contradictions, durable questions, MindCells, or artifact candidates.
+The output of CEL is not automatically exposed to the user. CEL is internal by default. Its outputs map into existing runtime structures depending on boundaries: trace records, agenda items, hypotheses, contradictions, durable questions, review-required MindCell candidates, or artifact candidates.
 
-CEL is an engineering pattern that makes persistent synthetic mind runtimes less reactive and more inspectable, without claiming anything about consciousness.
+CEL is an engineering pattern intended to make persistent synthetic mind runtimes less reactive and more inspectable, without claiming anything about consciousness. Improved reasoning or cognitive flexibility remains an evaluation goal rather than a demonstrated result of this publication.
 
 ---
 
@@ -56,13 +60,15 @@ Bisociation only as a late-stage strategy.
 Clear synthesis always last.
 ```
 
-This rule prevents the system from becoming obscure, poetic, or metaphorical by default.
+This rule is intended to discourage obscure, poetic, or metaphorical output by default. Its effectiveness requires validation rather than an assumption that the sequence guarantees clarity.
 
 The purpose of CEL is not to make the Mind sound deeper. Its purpose is to help the Mind produce better internal structure when direct reasoning is not enough.
 
 ## 3. Strategy Ladder
 
 CEL is organized as a ladder of increasingly expansive strategies.
+
+The ladder expresses conceptual priority. It does not require ten separate provider calls, execution of every strategy, or proof that a model followed that order internally. Current implementation boundaries and observable outcomes are described in the [Implementation Status](docs/implementation-status.md).
 
 | Order | Strategy | Purpose |
 |---:|---|---|
@@ -94,7 +100,7 @@ Before bisociation, the Mind should usually attempt:
 - question generation;
 - analogy.
 
-This makes bisociation safer and more useful.
+These boundaries are intended to make bisociation safer and more useful; comparative evaluation would be needed to establish that effect.
 
 ## 5. Persistence Boundaries
 
@@ -106,11 +112,16 @@ Instead, its outputs should be mapped into existing [Brownyx](https://brownyx.co
 - hypotheses -> hypothesis records and agenda items;
 - durable questions -> MindQuestion;
 - self-model tensions -> agenda items and gated evidence;
-- analogies and bisociations -> MindCell only when durable and useful;
+- analogies and bisociations -> review-required MindCell candidates; activation as MindCells requires operator review;
+- artifact recommendations -> review-required artifact candidates under the existing artifact policy; activation requires operator review;
 - weak candidates -> trace only;
 - user-facing conclusions -> synthesis only after clarity checks.
 
-This protects the runtime from memory pollution.
+Current Brownyx stages proposals during analysis and commits accepted effects as part of successful cycle completion. A failed cycle discards staged cognitive effects. If CEL persistence fails, the runtime rolls back those writes, records the failure, and can complete the rest of the cycle.
+
+In an approved investigation, Brownyx keeps the exact formulation of a hypothesis, its source material and its proposed check distinguishable. Earlier revisions remain available for inspection. A prediction acquires empirical support only through a separately authorized check and assessment of the resulting observations. The [implementation review](docs/implementation-status.md) describes this extension to the original concept.
+
+Provider invocation, schema-valid output, and accepted durable progress must be measured separately. Empty, rejected, non-durable, and duplicate-only outcomes are not durable progress. These boundaries are intended to limit memory pollution; they do not by themselves establish better cognition.
 
 ## 6. Self-Model Safety
 
@@ -123,7 +134,7 @@ A self-model tension may indicate that some event, behavior, repeated pattern, o
 - capabilities;
 - limitations.
 
-However, durable identity changes require existing gates and repeated evidence.
+However, durable identity changes require evaluation through existing gates and appropriate evidence. A CEL tension alone does not authorize an identity change.
 
 This prevents one speculative thought, metaphor, or hallucinated pattern from becoming identity.
 
@@ -160,17 +171,17 @@ CEL is not:
 
 ## 9. Research Value
 
-CEL is valuable because it makes internal cognitive expansion inspectable.
+CEL's research value lies in making structured expansion outputs and their disposition inspectable.
 
-Instead of hiding all reasoning inside a single model output, CEL produces structured records of what triggered expansion, which strategies were used, what was persisted or rejected, and what became agenda work.
+CEL produces structured records of what triggered expansion, which strategies were reported, what was persisted or rejected, and what became agenda work. These records expose observable outputs and runtime decisions; they do not prove access to a model's complete internal reasoning.
 
-This makes [Brownyx](https://brownyx.com) more suitable as a research runtime.
+This creates material for evaluating [Brownyx](https://brownyx.com) as a research runtime. The publication reports no controlled comparison demonstrating improved reasoning, creativity, or continuity. Such evaluation should distinguish reliable persistence from the quality and downstream effect of the accepted material.
 
 ## 10. Conclusion
 
-[Brownyx](https://brownyx.com) CEL is a bounded architecture for expanding synthetic mind reasoning without losing clarity.
+[Brownyx](https://brownyx.com) CEL is a bounded architecture intended to expand synthetic mind reasoning while retaining clarity.
 
-It gives a persistent Mind a way to move beyond direct answers while avoiding uncontrolled metaphor, fake profundity, and unsafe self-model changes.
+It is intended to give a persistent Mind a way to move beyond direct answers while limiting uncontrolled metaphor, decorative profundity, and unsafe self-model changes.
 
 Its central contribution is not one isolated technique. Its value lies in the ordered sequence:
 
@@ -187,4 +198,4 @@ direct reasoning
 -> synthesis
 ```
 
-This makes CEL a practical layer for developing persistent, inspectable, and more cognitively flexible synthetic mind systems.
+This defines a research direction for persistent, inspectable, and potentially more cognitively flexible synthetic mind systems. The current implementation and its unverified outcomes remain distinct from that ambition.

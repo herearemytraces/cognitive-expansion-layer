@@ -32,18 +32,14 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="sitemap" type="application/xml" href="sitemap.xml">
   <link rel="alternate" type="text/markdown" href="llms.txt" title="LLM-readable site summary">
-  <link rel="api-catalog" href="/.well-known/api-catalog">
+  <link rel="describedby" href="/.well-known/api-catalog.json" type="application/json" title="Static documentation catalog">
   <link rel="service-doc" href="https://cel.brownyx.com/">
   <link rel="service-doc" href="https://cel.brownyx.com/cel-specification.md">
   <link rel="service-doc" href="https://cel.brownyx.com/architecture.md">
+  <link rel="service-doc" href="https://cel.brownyx.com/implementation-status.md">
   <link rel="service-doc" href="https://cel.brownyx.com/faq.md">
   <link rel="describedby" href="https://cel.brownyx.com/llms.txt" type="text/markdown">
   <link rel="describedby" href="https://cel.brownyx.com/architecture.md" type="text/markdown">
-  <link rel="authorization" href="/.well-known/oauth-authorization-server.json">
-  <link rel="resource-metadata" href="/.well-known/oauth-protected-resource.json">
-  <link rel="openid-configuration" href="/.well-known/openid-configuration.json">
-  <link rel="dns-aid" href="/.well-known/dns-aid-configuration.md" title="DNS-AID Setup">
-  <link rel="service-desc" href="/.well-known/docs-api" type="application/json">
 
   <script type="application/ld+json">
   {
@@ -73,9 +69,10 @@
         <a href="#concept">Concept</a>
         <a href="#rule">Core Rule</a>
         <a href="#ladder">Strategy Ladder</a>
+        <a href="#status">Status</a>
         <a href="#docs">Docs</a>
         <a href="#purpose">Purpose</a>
-        <a href="https://github.com/VNemchenko/cognitive-expansion-layer">GitHub</a>
+        <a href="https://github.com/herearemytraces/cognitive-expansion-layer">GitHub</a>
       </div>
     </nav>
   </header>
@@ -97,13 +94,13 @@
         </p>
 
         <div class="hero-actions">
-          <a class="button" href="https://github.com/VNemchenko/cognitive-expansion-layer/blob/master/WHITEPAPER.md">
+          <a class="button" href="https://github.com/herearemytraces/cognitive-expansion-layer/blob/master/WHITEPAPER.md">
             Read the Whitepaper
           </a>
           <a class="button secondary" href="cel-specification.md">
             Technical Specification
           </a>
-          <a class="button secondary" href="https://github.com/VNemchenko/cognitive-expansion-layer">
+          <a class="button secondary" href="https://github.com/herearemytraces/cognitive-expansion-layer">
             View on GitHub
           </a>
         </div>
@@ -146,8 +143,8 @@
         <article class="card">
           <h3>Expansion only when justified</h3>
           <p>
-            CEL runs only for ambiguous, strategic, diagnostic, self-model,
-            contradiction, research, or creative situations.
+            The runtime considers salience, operator requests, and the current
+            investigation. Repeated attempts without progress can be deferred.
           </p>
         </article>
 
@@ -289,6 +286,38 @@
       </div>
     </section>
 
+    <section id="status" class="section">
+      <h2>Implementation status</h2>
+
+      <p>
+        Source review on <time datetime="2026-11-19">November 19, 2026</time>.
+        CEL runs on eligible cycles after memory and inner-world recall and before
+        action selection. On a reading cycle it can also use passages from
+        approved sources. The runtime commits accepted proposals when the cycle
+        finishes successfully.
+      </p>
+
+      <p>
+        For an approved research program, CEL can propose a hypothesis with a
+        defined scope, revise its formulation, identify missing evidence, or
+        propose a check. Earlier hypothesis revisions remain available.
+        Empirical support requires observations from a separately authorized check.
+      </p>
+
+      <p>
+        Other durable outcomes include contradictions, questions, and self-model
+        tensions. Analogies and bisociations can yield MindCell candidates.
+        Both MindCell and artifact candidates require operator review.
+      </p>
+
+      <p>
+        This public repository publishes the architecture and its boundaries.
+        Implementation does not establish cognitive improvement or subjective
+        experience. See the <a href="implementation-status.md">implementation status</a>
+        for the reviewed scope and remaining evaluation work.
+      </p>
+    </section>
+
     <section id="docs" class="section">
       <h2>Documentation</h2>
 
@@ -300,7 +329,7 @@
       </p>
 
       <div class="links-list">
-        <a href="https://github.com/VNemchenko/cognitive-expansion-layer/blob/master/WHITEPAPER.md">
+        <a href="https://github.com/herearemytraces/cognitive-expansion-layer/blob/master/WHITEPAPER.md">
           Whitepaper - full architectural whitepaper
         </a>
         <a href="cel-specification.md">
@@ -308,6 +337,9 @@
         </a>
         <a href="architecture.md">
           Architecture - runtime position and component design
+        </a>
+        <a href="implementation-status.md">
+          Implementation Status - reviewed runtime behavior and evaluation limits
         </a>
         <a href="prior-art-and-positioning.md">
           Prior Art and Positioning - relationship to existing research
@@ -367,7 +399,7 @@
 
       <p>
         If you cite this work, use the metadata in
-        <a href="https://github.com/VNemchenko/cognitive-expansion-layer/blob/master/CITATION.cff">CITATION.cff</a>.
+        <a href="https://github.com/herearemytraces/cognitive-expansion-layer/blob/master/CITATION.cff">CITATION.cff</a>.
       </p>
 
       <div class="quote-panel">
@@ -382,9 +414,9 @@
         Documentation in this repository is licensed under
         <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
         See
-        <a href="https://github.com/VNemchenko/cognitive-expansion-layer/blob/master/LICENSE.md">LICENSE.md</a>
+        <a href="https://github.com/herearemytraces/cognitive-expansion-layer/blob/master/LICENSE.md">LICENSE.md</a>
         and
-        <a href="https://github.com/VNemchenko/cognitive-expansion-layer/blob/master/NOTICE.md">NOTICE.md</a>
+        <a href="https://github.com/herearemytraces/cognitive-expansion-layer/blob/master/NOTICE.md">NOTICE.md</a>
         for full terms.
       </p>
 
@@ -402,7 +434,18 @@
     </div>
   </footer>
   <script>
-  if (typeof navigator !== 'undefined' && navigator.modelContext) {
+  if (typeof navigator !== 'undefined' && typeof navigator.modelContext?.registerTool === 'function') {
+    const celDocs = [
+      { title: 'CEL Specification', url: 'https://cel.brownyx.com/cel-specification.md', description: 'Technical specification and constraints', keywords: 'specification constraints technical requirements synthesis memory' },
+      { title: 'Architecture', url: 'https://cel.brownyx.com/architecture.md', description: 'Runtime position and component design', keywords: 'architecture runtime components design staging terminal persistence recall' },
+      { title: 'Implementation Status', url: 'https://cel.brownyx.com/implementation-status.md', description: 'Runtime behavior and evaluation limits reviewed on November 19, 2026', keywords: 'status implemented review validation evaluation MindCell candidates persistence evidence hypotheses revisions verification' },
+      { title: 'Prior Art and Positioning', url: 'https://cel.brownyx.com/prior-art-and-positioning.md', description: 'Relationship to existing research', keywords: 'research positioning related work' },
+      { title: 'Implementation Boundaries', url: 'https://cel.brownyx.com/implementation-boundaries.md', description: 'What this repository does and does not contain', keywords: 'scope boundaries what is included private public documentation' },
+      { title: 'IP and Publication Strategy', url: 'https://cel.brownyx.com/ip-strategy.md', description: 'Defensive publication and IP considerations', keywords: 'ip patent strategy defensive publication' },
+      { title: 'Terminology', url: 'https://cel.brownyx.com/terminology.md', description: 'Project-specific definitions', keywords: 'definitions terms glossary' },
+      { title: 'FAQ', url: 'https://cel.brownyx.com/faq.md', description: 'Frequently asked questions', keywords: 'questions answers common' }
+    ];
+
     navigator.modelContext.registerTool({
       name: 'get_cel_overview',
       description: 'Return the Brownyx Cognitive Expansion Layer overview including core concept, strategy ladder, and purpose.',
@@ -412,31 +455,26 @@
           name: 'Brownyx Cognitive Expansion Layer',
           concept: 'A bounded cognitive expansion architecture for persistent synthetic mind runtimes.',
           rule: 'Direct reasoning first. Cognitive expansion only when justified. Bisociation only as a late-stage strategy. Clear synthesis always last.',
-          steps: ['Context Sufficiency', 'Intent Clarification', 'Frame Switching', 'Contradiction Detection', 'Hypothesis Generation', 'Self-Model Tension', 'Question Generation', 'Analogy', 'Bisociation', 'Synthesis']
+          steps: ['Context Sufficiency', 'Intent Clarification', 'Frame Switching', 'Contradiction Detection', 'Hypothesis Generation', 'Self-Model Tension', 'Question Generation', 'Analogy', 'Bisociation', 'Synthesis'],
+          reviewedOn: '2026-11-19',
+          implementationStatus: 'CEL is optional. With approved sources it can propose scoped hypothesis revisions and checks. Accepted changes commit on successful cycle completion. Empirical conclusions require results from a separately authorized check. MindCell and artifact candidates require operator review. Cognitive benefit remains unmeasured here.',
+          statusUrl: 'https://cel.brownyx.com/implementation-status.md'
         };
       }
     });
 
     navigator.modelContext.registerTool({
       name: 'list_cel_docs',
-      description: 'List all available Brownyx CEL documentation pages with their URLs and descriptions.',
+      description: 'List the core Brownyx CEL documentation pages with their URLs and descriptions.',
       inputSchema: { type: 'object', properties: {} },
       execute: async () => {
-        return [
-          { title: 'CEL Specification', url: 'https://cel.brownyx.com/cel-specification.md', description: 'Technical specification and constraints' },
-          { title: 'Architecture', url: 'https://cel.brownyx.com/architecture.md', description: 'Runtime position and component design' },
-          { title: 'Prior Art and Positioning', url: 'https://cel.brownyx.com/prior-art-and-positioning.md', description: 'Relationship to existing research' },
-          { title: 'Implementation Boundaries', url: 'https://cel.brownyx.com/implementation-boundaries.md', description: 'What this repository does and does not contain' },
-          { title: 'IP and Publication Strategy', url: 'https://cel.brownyx.com/ip-strategy.md', description: 'Defensive publication and IP considerations' },
-          { title: 'Terminology', url: 'https://cel.brownyx.com/terminology.md', description: 'Project-specific definitions' },
-          { title: 'FAQ', url: 'https://cel.brownyx.com/faq.md', description: 'Frequently asked questions' }
-        ];
+        return celDocs.map(({ title, url, description }) => ({ title, url, description }));
       }
     });
 
     navigator.modelContext.registerTool({
       name: 'search_cel_docs',
-      description: 'Search the Brownyx CEL documentation for a specific topic or keyword.',
+      description: 'Find core Brownyx CEL pages by title, description, or topic keywords. This searches the documentation catalog, not full page contents.',
       inputSchema: {
         type: 'object',
         properties: {
@@ -445,18 +483,16 @@
         required: ['query']
       },
       execute: async (params) => {
-        const docs = [
-          { title: 'CEL Specification', url: 'https://cel.brownyx.com/cel-specification.md', keywords: 'specification, constraints, technical, requirements' },
-          { title: 'Architecture', url: 'https://cel.brownyx.com/architecture.md', keywords: 'architecture, runtime, components, design' },
-          { title: 'Prior Art', url: 'https://cel.brownyx.com/prior-art-and-positioning.md', keywords: 'research, positioning, related work' },
-          { title: 'Implementation Boundaries', url: 'https://cel.brownyx.com/implementation-boundaries.md', boundaries: 'scope, boundaries, what is included' },
-          { title: 'IP Strategy', url: 'https://cel.brownyx.com/ip-strategy.md', keywords: 'ip, patent, strategy, defensive publication' },
-          { title: 'Terminology', url: 'https://cel.brownyx.com/terminology.md', keywords: 'definitions, terms, glossary' },
-          { title: 'FAQ', url: 'https://cel.brownyx.com/faq.md', keywords: 'questions, answers, common' }
-        ];
-        const q = params.query.toLowerCase();
-        const matches = docs.filter(d => d.title.toLowerCase().includes(q) || d.keywords.includes(q));
-        return matches.length > 0 ? matches : { message: 'No matching documents found. Try browsing the full list.', allDocs: docs };
+        const q = typeof params?.query === 'string' ? params.query.trim().toLowerCase() : '';
+        if (!q) {
+          return { message: 'Enter a topic or browse the documentation list.', allDocs: celDocs };
+        }
+        const matches = celDocs.filter(d =>
+          [d.title, d.description, d.keywords].some(value =>
+            typeof value === 'string' && value.toLowerCase().includes(q)
+          )
+        );
+        return matches.length > 0 ? matches : { message: 'No matching documents found. Try browsing the full list.', allDocs: celDocs };
       }
     });
   }

@@ -6,7 +6,7 @@
       "affiliation": "Brownyx"
     }
   ],
-  "description": "Documentation-only defensive publication for Brownyx Cognitive Expansion Layer (Brownyx CEL), a bounded internal architecture layer for persistent synthetic mind runtimes.",
+  "description": "Documentation-only defensive publication for Brownyx Cognitive Expansion Layer (Brownyx CEL), a bounded internal architecture layer for persistent synthetic mind runtimes. The original conceptual publication is identified as v0.1.0. The unreleased 2026-11-19 source review documents how approved source material can inform scoped hypothesis revisions and proposed checks, when accepted changes become durable, and what evidence an empirical conclusion requires. Canonical repository: https://github.com/herearemytraces/cognitive-expansion-layer. This metadata does not assert that an archived release or DOI exists.",
   "license": "cc-by-4.0",
   "keywords": [
     "Brownyx",

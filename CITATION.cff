@@ -4,10 +4,10 @@ title: "Brownyx Cognitive Expansion Layer: A Bounded Architecture for Expanding 
 authors:
   - family-names: "Nemchenko"
     given-names: "Vitalii"
-year: 2026
 version: "0.1.0"
 license: "CC-BY-4.0"
-repository-code: "https://github.com/VNemchenko/cognitive-expansion-layer"
+repository-code: "https://github.com/herearemytraces/cognitive-expansion-layer"
+url: "https://cel.brownyx.com/"
 keywords:
   - Brownyx
   - Cognitive Expansion Layer

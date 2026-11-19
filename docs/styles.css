@@ -179,6 +179,10 @@ h1 {
   border-top: 1px solid var(--line);
 }
 
+section[id] {
+  scroll-margin-top: 72px;
+}
+
 .section h2 {
   font-size: clamp(28px, 4vw, 48px);
   line-height: 1.05;
@@ -301,6 +305,10 @@ code {
 }
 
 @media (max-width: 860px) {
+  section[id] {
+    scroll-margin-top: 180px;
+  }
+
   .nav {
     align-items: flex-start;
     flex-direction: column;

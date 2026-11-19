@@ -1,5 +1,7 @@
 # Repository Manifest
 
+Publication sources and maintenance files in this repository. The static site is served from `docs/`; its delivery utilities and local validation are separate from the private Brownyx runtime.
+
 - `.github/ISSUE_TEMPLATE/documentation-clarification.md`
 - `.github/ISSUE_TEMPLATE/prior-art-reference.md`
 - `.gitignore`
@@ -8,17 +10,36 @@
 - `CITATION.cff`
 - `CODE_OF_CONDUCT.md`
 - `CONTRIBUTING.md`
-- `LICENSE.md`
-- `NOTICE.md`
-- `README.md`
-- `SECURITY.md`
-- `WHITEPAPER.md`
+- `docs/.nojekyll`
+- `docs/.well-known/api-catalog`
+- `docs/.well-known/api-catalog.json`
+- `docs/.well-known/dns-aid-configuration.md`
+- `docs/.well-known/docs-api`
+- `docs/_headers`
 - `docs/architecture.md`
+- `docs/auth.md`
 - `docs/cel-specification.md`
+- `docs/CNAME`
 - `docs/faq.md`
+- `docs/favicon.svg`
 - `docs/implementation-boundaries.md`
+- `docs/implementation-status.md`
+- `docs/index.html`
 - `docs/ip-strategy.md`
 - `docs/license-options.md`
+- `docs/llms.txt`
 - `docs/prior-art-and-positioning.md`
 - `docs/publication-checklist.md`
+- `docs/robots.txt`
+- `docs/sitemap.xml`
+- `docs/styles.css`
 - `docs/terminology.md`
+- `docs/worker/markdown-negotiation.js`
+- `LICENSE.md`
+- `MANIFEST.md`
+- `NOTICE.md`
+- `README.md`
+- `scripts/check-publication.mjs`
+- `SECURITY.md`
+- `workers/cel-indexing-headers.js`
+- `WHITEPAPER.md`
